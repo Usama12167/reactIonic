@@ -1,8 +1,13 @@
 import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/react';
 import ExploreContainer from '../components/ExploreContainer';
 import './Tab2.css';
+import { useSelector, useDispatch } from 'react-redux'
 
 const Tab2: React.FC = () => {
+  const url = useSelector((state: RootState) => state.counter.imageUrl);
+
+console.log("url",url);
+
   return (
     <IonPage>
       <IonHeader>

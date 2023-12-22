@@ -33,10 +33,13 @@ import '@ionic/react/css/display.css';
 
 /* Theme variables */
 import './theme/variables.css';
+import { Provider } from 'react-redux';
+import {store} from './store/index'
 
 setupIonicReact();
 
 const App: React.FC = () => (
+  <Provider store={store}>
   <IonApp>
     <IonReactRouter>
       <IonTabs>
@@ -71,6 +74,7 @@ const App: React.FC = () => (
       </IonTabs>
     </IonReactRouter>
   </IonApp>
+  </Provider>
 );
 
 export default App;
